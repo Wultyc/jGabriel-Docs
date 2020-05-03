@@ -1,8 +1,12 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
-baseURL = 'https://example.com/'
-title = 'Hugo Book'
+baseURL = 'https://docs.jgabriel.eu/'
+title = 'jGabriel Docs'
 theme = 'hugo-book'
+
+# Website default language
+defaultContentLanguage = "pt"
+languageCode = "pt-pt"
 
 # Book configuration
 disablePathToLower = true
@@ -20,9 +24,10 @@ enableGitInfo = true
 # There are different options to translate files
 # See https://gohugo.io/content-management/multilingual/#translation-by-filename
 # And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
+
 [languages]
-[languages.en]
-  languageName = 'English'
+[languages.pt]
+  languageName = 'Português'
   contentDir = 'content'
   weight = 1
 
@@ -59,17 +64,17 @@ enableGitInfo = true
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo = 'https://github.com/alex-shpak/hugo-book'
+  BookRepo = 'https://github.com/wultyc/jGabriel-Docs/'
 
   # Enable "Edit this page" links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
   # Edit path must point to root directory of repo.
-  BookEditPath = 'edit/master/exampleSite'
+  BookEditPath = 'edit/master'
 
   # Configure the date format used on the pages
   # - In git information
   # - In blog posts
-  BookDateFormat = 'January 2, 2006'
+  BookDateFormat = '2 January 2006'
 
   # (Optional, default true) Enables search function with flexsearch,
   # Index is built on fly, therefore it might slowdown your website.
