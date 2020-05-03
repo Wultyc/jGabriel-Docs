@@ -2,7 +2,7 @@
 
 baseURL = 'https://example.com/'
 title = 'Hugo Book'
-theme = 'book'
+theme = 'hugo-book'
 
 # Book configuration
 disablePathToLower = true
@@ -26,26 +26,16 @@ enableGitInfo = true
   contentDir = 'content'
   weight = 1
 
-[languages.ru]
-  languageName = 'Russian'
-  contentDir = 'content.ru'
-  weight = 2
-
-[languages.zh]
-  languageName = 'Chinese'
-  contentDir = 'content.zh'
-  weight = 3
-
 [menu]
 # [[menu.before]]
 [[menu.after]]
-  name = "Github"
-  url = "https://github.com/alex-shpak/hugo-book"
+  name = "HomePage"
+  url = "https://www.jgabriel.eu"
   weight = 10
 
 [[menu.after]]
-  name = "Hugo Themes"
-  url = "https://themes.gohugo.io/hugo-book/"
+  name = "Blog"
+  url = "https://www.jgabriel.eu/article/"
   weight = 20
 
 [params]
