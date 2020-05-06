@@ -10,3 +10,9 @@ $ cd themes/hugo-book/exampleSite
 ```bash
 $ hugo server --minify --bind "0.0.0.0" --themesDir ../..
 ```
+
+# Create a new project
+On HUGO project root
+```bash
+$ hugo new docs/<project folder>/<project-name>/_index.md
+```
