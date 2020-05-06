@@ -1,7 +1,7 @@
 ---
 headless: true
 ---
-- [**Homepage**]({{< relref "/_index" >}})
+- [**Homepage**]({{< relref "/" >}})
 <br />
 
 - [**Projetos Pessoais**]({{< relref "/docs/projetos-pessoais" >}})
