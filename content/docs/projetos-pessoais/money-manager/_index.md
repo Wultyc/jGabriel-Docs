@@ -1,7 +1,7 @@
 ---
 title: "Money Manager"
 weight: 1
-bookCollapseSection: false
+bookCollapseSection: true
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
