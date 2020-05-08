@@ -10,7 +10,7 @@ bookCollapseSection: false
 # Organização do repositório
 O repositório irá conter 3 branches principais. Estas servirão para separar o código fonte do projeto nos seus principais estados: Desenvolvimento, Testes e Produção. Conforme a figura a baixo, a branch **Develop** corresponde ao estado de desenvolvimento, **Staging** ao estado de testes e por fim a **Master** corresponde ao estado de produção.
 
-{{<figure src="/images/money-manager/0.0_Source-Code-Management-Protocol.png">}}
+{{<figure src="/images/money-manager/2.1_Source-Code-Management-Protocol.png">}}
  
 É possível ainda notar que existem algumas branches criadas a partir da develop. Estas são branches de feature, ou seja, novas funcionalidades que serão incorporadas no código no futuro. Estas apenas são inluídas na branch develop quando são consideradas prontas [ver definição de pronto]. Após todas a funcionalidade concluídas, é feito um merge para Staging e é aqui onde a aplicação é testada num ambiente mais próximo ao que terá em produção e são procurados problemas na utilização da aplicação. Concluída esta fase é feito um pull da Master para verificar que nenhuma alteração corrompeu a aplicação. Caso esteja tudo bem as alterações são enviadas para Master e para Develop para que todas as branchs se sincronizem.
 Todos os desenvolvimento devem começar na branch Develop a menos que se trate de um hot fix.
