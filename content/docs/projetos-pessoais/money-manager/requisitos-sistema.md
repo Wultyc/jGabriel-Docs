@@ -163,3 +163,5 @@ Em versões futuras, os seguintes requisitos deverão ser incluidos
     - Definir, ver, editar e apagar alertas
 - Gestor de Organização	
     - Exigir aprovação na atualização das informações das contas
+- Aplicação
+    - Cliente CLI em Python
