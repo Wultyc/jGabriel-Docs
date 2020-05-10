@@ -23,6 +23,8 @@ Pretende-se abordar as seguintes tencologias durante o projeto
 Alguns dos elementos desta stack podem de algum modo ser redundantes, mas isto é proposital pois será possivel fazer uma comparação entre essas ferramentas
 
 # Estado do projeto
-Estado atual do projeto: Em desenvolvimento
+Estado atual do projeto:  {{< button href="https://github.com/Wultyc/Money-Manager" >}}Em desenvolvimento{{< /button >}}
 
-Data de Inicio do Projeto: 12 Abril de 2019
+Data de Inicio do Projeto: 12 Abril de 2020
+
+# Repositório do Projeto
