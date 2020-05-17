@@ -17,7 +17,7 @@ Tal como o nome indica, nesta página contem informações sobre o modo de uso d
 {{<figure src="/images/mock-api/howtouse.png">}}
 
 ## Mocks
-Nesta página são listados todos os endpoints registados no sistema. Cada linha é referente a um endpoint e possui um indicador visual sobre se o endpoint está ativo ou não. Clicando no link de cada endpoint somos rederecionados para a página Mocks/Watch.
+Nesta página são listados todos os endpoints registados no sistema. Cada linha é referente a um endpoint e possui um indicador visual sobre se o endpoint está ativo ou não. Clicando no link de cada endpoint somos redirecionados para a página Mocks/Watch.
 {{<figure src="/images/mock-api/mocks.png">}}
 
 ## Mocks/Watch

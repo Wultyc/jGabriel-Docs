@@ -15,14 +15,14 @@ O Serviço API é a parte principal da aplicação. É onde está toda a lógica
 Antes de começar a utilizar o serviço é necessário instalar-lo num servidor. Os requisitos para executar a aplicação são:
 * Servidor Web Nginx ou Apache com serviço *Rewrite Engine*
 * PHP na versão 7.2.5
-* Uma base de dados suportada nativamente pelo Laravel
+* Um sistema de gestão base de dados suportado nativamente pelo Laravel
 * Composer
-* git
+* Git
 
 ### Instalação
 1. Configurar o servidor Web e sistema de gestão de base de dados
 2. Criar uma base de dados para o serviço
-3. Fazer download da última versão estável na página de lançamentos do repositório e copiar o conteúdo para o root do servidor web
+3. Fazer download da última versão estável na página de [lançamentos](https://github.com/Wultyc/mock-api/releases/) do repositório e copiar o conteúdo para o root do servidor web
 4. No diretório onde se copiou os ficheiros executar os seguintes comandos
 ```bash
 cp .env.example .env
@@ -39,7 +39,7 @@ php artisan migrate:fresh
 No futuro será disponibilizada uma imagem Docker para executar este serviço.
 {{< /hint >}}
 
-Após a instalação concluida é possivel começar de imediato a utilizar o serviço. Para isso basta fazer um request POST para criar um endpoint e um request GET para obter o payload enviado no POST.
+Após a instalação concluída é possivel começar de imediato a utilizar o serviço. Para isso basta fazer um request POST para criar um endpoint e um request GET para obter o payload enviado no POST.
 
 ### Endpoints
 Um endpoint neste serviço pode ser qualquer coisa dentro de ```/api/``` à exceção de ```/api/mgmt/``` que é usado para fazer algumas operações de gestão no serviço. Assim se quisermos, p.e., criar o endpoint ```/api/first-endpoint```, basta fazer um request POST para esse endpoint.

@@ -10,7 +10,7 @@ bookCollapseSection: true
 ---
 # Mock API
 O Mock API é um serviço de API Mocking escrito em PHP com o *framwork* Laravel.  
-É distribuido com a [Licença MIT](https://github.com/Wultyc/mock-api/blob/master/LICENSE) e está disponível para todos que queira usar e estudar.  
+É distribuido com a [Licença MIT](https://github.com/Wultyc/mock-api/blob/master/LICENSE) e está disponível para todos que queiram usar e estudar.  
 
 A aplicação divide-se um duas partes fundamentais:
 * Serviço de API
