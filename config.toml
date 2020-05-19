@@ -12,6 +12,9 @@ languageCode = "pt-pt"
 disablePathToLower = true
 enableGitInfo = true
 
+#Google Analytics Config
+googleAnalytics = "UA-167181822-2"
+
 # Needed for mermaid/katex shortcodes
 [markup]
 [markup.goldmark.renderer]
