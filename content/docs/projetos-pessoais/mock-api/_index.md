@@ -17,3 +17,6 @@ A aplicação divide-se um duas partes fundamentais:
 * Interface Web
 
 Cada uma destas camadas é explicada em maior detalhe nas respetivas páginas desta documentação.
+
+## Idiomas disponiveis
+Este serviço está apenas disponível no idioma inglês.
