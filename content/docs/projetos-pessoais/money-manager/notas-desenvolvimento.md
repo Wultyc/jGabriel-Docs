@@ -4,7 +4,7 @@ weight: 100
 bookCollapseSection: false
 # bookFlatSection: false
 # bookToc: true
-bookHidden: false
+bookHidden: true
 # bookComments: true
 ---
 Ao registar os valores de amout, gravar o modulo do valor introduzido multiplicado por -1 no caso de ser uma despesa, saída por transferência ou poupança.
