@@ -1,6 +1,6 @@
 ---
 title: "Servico API"
-weight: 1
+weight: 2
 github: ""
 bookCollapseSection: false
 # bookFlatSection: false
@@ -54,7 +54,7 @@ Estão disponíveis neste momento 5 verbos HTTP.
 
 ## Gestão da Mock API
 São disponibilizados alguns recursos de gestão no endpoint ```/api/mgmt/```
-* [GET]  Lista todas os endpoints registados
+* [GET]  Lista todas os endpoints registados. Para obter os detalhes de apenas um endpoint, basta fazer um get request para ```/api/mgmt/{endpoint}```
 * [POST] Possiblita a criação de vários endpoints ao mesmo tempo. O payload deverá ter o seguinte formato
 ```json
 [
