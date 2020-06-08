@@ -22,6 +22,7 @@ Este segundo lançamento é focado em organização interna de código e migraç
 
 ### Problemas conhecidos
 - Nas rotas **/mocks** e **/mocks/watch** a animação de carregamento
+- Funcionalidade de restauro de endpoints não esta a funcionar
 
 ### Quer ajudar?
 Faça um pull request com as alterações que considere uteis, abra um issue no GitHub ou contacte-me pelos outros canais.

@@ -8,7 +8,7 @@ bookCollapseSection: false
 # bookHidden: false
 # bookComments: true
 ---
-# Intercae Web
+# Interface Web
 A interface web foi construída para apresentar alguma informação útil sobre o serviço de mocking, como um guia rápido de uso, endpoints registados e detalhes de cada endpoint.
 {{<figure src="/images/mock-api/homepage.png">}}
 
