@@ -31,6 +31,9 @@ Construir uma aplicação que calcula-se o caminho ótimo para um AGV recolher p
 {{< button >}}Java{{< /button >}}
 {{< button >}}AMPL{{< /button >}}
 
+## Repositório
+{{< button href="https://github.com/Wultyc/ISEP_1718_2A1S_LENG3" >}}Github{{< /button >}}
+
 ## Fases do Projeto
 Este projeto foi dividido em duas fases. Uma primeira, realizada durante o período letivo de Investigação Operacional onde foi apresentado o problema e solicitado uma solução que consitia em desenvolver um modelo matemático para resolver o problema e implementar-la em Microsoft Excel com VBA e Solver.  
 Em Laboratórios de Sistemas 3 o desafio foi implementar esse mesmo modelo matemático, mas desta vez em AMPL e construir uma aplicação em JAVA com a responsabilidade de manter a informação do armazém, enviar um pedido de otimização para op AMPL e modificar as informação registadas mediante o resultado obtido.
