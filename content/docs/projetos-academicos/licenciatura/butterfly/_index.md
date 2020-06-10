@@ -24,7 +24,7 @@ André Oliveira
 Desenvolver uma aplicação em Java que auxilia-se os diretores de curso do ISEP a gerir os projetos de estágio dos alunos e que gravasse essa informação de forma precistente.
 
 ## Tecnologias Principais
-Java
+{{< button >}}Java{{< /button >}}
 
 ## Curiosidade
 O nome Project Butterfly foi escolhido pelos alunos, e pretende exprimir o simbolismo que um estágio tem para os estudantes que inicialmente passam por todo este processo de aprendizagem (larva da borboleta) que futuramente se vai transformar em engenheiros (borboleta) e passarão por um processo de adaptação a sua nova realidade (metamorfose).
