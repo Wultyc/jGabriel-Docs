@@ -1,5 +1,5 @@
 ---
-title: "Demonstração da aplicação em Java - Compaaração"
+title: "Demonstração da aplicação em Java - Comparação"
 date: 2018-01-10
 github: ""
 weight: 4
