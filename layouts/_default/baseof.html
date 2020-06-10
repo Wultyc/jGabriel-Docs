@@ -19,6 +19,9 @@
       </header>
 
       {{ partial "docs/inject/content-before" . }}
+
+      <h1>{{ partial "docs/title" . }}</h1> <!-- Insert page title -->
+
       {{ template "main" . }} <!-- Page Content -->
       {{ partial "docs/inject/content-after" . }}
 
