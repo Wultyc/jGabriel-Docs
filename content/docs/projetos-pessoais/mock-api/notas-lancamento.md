@@ -8,8 +8,6 @@ bookCollapseSection: false
 # bookHidden: false
 # bookComments: true
 ---
-# Notas de Lançamento
-
 ## Release 2.0
 Este segundo lançamento é focado em organização interna de código e migração da interface web para Vue.JS e Laravel Mix
 

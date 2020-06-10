@@ -8,7 +8,6 @@ bookCollapseSection: false
 # bookHidden: false
 # bookComments: true
 ---
-# Serviço de API
 O Serviço API é a parte principal da aplicação. É onde está toda a lógica relacionada com o API Mocking.
 
 ## Utilização básica

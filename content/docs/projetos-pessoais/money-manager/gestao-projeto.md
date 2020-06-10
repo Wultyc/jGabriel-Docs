@@ -7,7 +7,7 @@ bookCollapseSection: false
 # bookHidden: false
 # bookComments: true
 ---
-# Organização do repositório
+## Organização do repositório
 O repositório irá conter 3 branches principais. Estas servirão para separar o código fonte do projeto nos seus principais estados: Desenvolvimento, Testes e Produção. Conforme a figura a baixo, a branch **Develop** corresponde ao estado de desenvolvimento, **Staging** ao estado de testes e por fim a **Master** corresponde ao estado de produção.
 
 {{<figure src="/images/money-manager/2.1_Source-Code-Management-Protocol.png">}}

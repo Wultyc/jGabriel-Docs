@@ -7,12 +7,12 @@ bookCollapseSection: false
 # bookHidden: false
 # bookComments: true
 ---
-# Propósito geral do sistema
+## Propósito geral do sistema
 Sistema de registo de transações financeiras alojado na cloud.
 
-# User Stories
+## User Stories
 
-## Utilizador
+### Utilizador
 - Como utilizador eu pretendo poder registar as minhas transacções financeiras (receitas, despesas e transferências). Assim posso manter um histórico de transações
 - Como utilizador eu pretendo ter alguns gráficos e resumos das minhas transições financeiras em diferentes momentos do tempo para assim poder analisar o meu passado financeiro.
 - Como utilizador pretendo poder fazer o download dos meus dados na aplicação. Assim posso saber exactamente o que aplicação "sabe" sobre mim e posso fazer uma analise própria dos dados.
@@ -27,7 +27,7 @@ Sistema de registo de transações financeiras alojado na cloud.
 - Como utilizador pretendo poder definir alertas para assim ser avisado movimentos recorrentes e/ou excesso de gastos.
 - Como utilizador pretendo poder atualizar as minhas informações pessoais.
 
-## Gestor de Conta
+### Gestor de Conta
 - Como gestor de conta pretendo controlar as permissões de (leitura e escrita) de cada uma das minhas contas individualmente. Assim poderei controlar mais eficazmente as alterações que são feitas.
 - Como gestor de conta pretendo poder adicionar e remover utilizadores das minhas contas. Assim tenho um melhor controlo de quem tem acesso à informação da conta.
 - Como gestor de conta pretendo controlar as categorias que os registos podem ou não ter.
@@ -36,7 +36,7 @@ Sistema de registo de transações financeiras alojado na cloud.
 - Como gestor de conta pretendo poder definir alertas. Assim posso ser notificado com informações sobre as minhas contas.
 - Como gestor de conta pretendo poder atualizar as informações da minha conta. Assim tenho a certeza que tudo estará sempre atualizado.
 
-## Gestor de Organização
+### Gestor de Organização
 - Como gestor de organização pretendo poder atualizar as informações da minha organização. Assim tenho a certeza que tudo estará sempre atualizado.
 - Como gestor de organização pretendo poder criar novas contas e nomear os respetivos administradores. Assim posso organizar de forma mais eficiente os movimentos da minha organização.
 - Como gestor de organização pretendo ter os mesmo poderes que os gestores das minhas contas.
@@ -46,20 +46,20 @@ Sistema de registo de transações financeiras alojado na cloud.
 - Como gestor de organização pretendo poder exigir aprovação sobre alterações significativas nas contas da minha organização. Assim posso evitar algum tipo de perda de informação.
 - Como gestor de conta pretendo poder nomear um novo gestor de organização. Assim posso dividir as responsabilidades com uma ou mais pessoas.
 
-## Administrador de Sistema
+### Administrador de Sistema
 - Como administrador de sistema pretendo poder controlar as permissões de cada tipo de utilizador. Assim posso manter a segurança e integridade das informações no sistema.
 - Como administrador pretendo poder adicionar/remover/desativar/ativar utilizadores do sistema. Assim posso ter um controlo mais efetivo sobre quem utiliza e como utiliza a aplicação.
 
 
-# Use Cases
+## Use Cases
 Com base nas user stories descritas acima, foram determinados os seguintes use cases
 {{<figure src="/images/money-manager/3.1_Diagrama-de-Use-Cases.png">}}
 
-# Diagrama de Sistema  
+## Diagrama de Sistema  
 Analisados os pontos anteriores, fica claro que o sistema terá 3 entidades distintas: User, Organization, Account, Transaction e . Não foi definido uma entidade para o cargo de Gestor de Conta e Gestor de Organização porque essas características vão ser definidas através de cargos das próprias contas/organizações. Além de simplificar as relações entre as entidades, esta solução permite ainda que um utilizador com um cargo mais elevado numa organização não tenha os mesmos poderes noutra organização.
 {{<figure src="/images/money-manager/3.2_Diagrama-de-Sistema.png">}}
 
-# Lista completa de requisitos
+## Lista completa de requisitos
 A lista final de requisitos do sistema é a seguinte:  
 - Utilizador
     - Tem de se autenticar sempre que pretende utilizar o sistema
@@ -157,7 +157,7 @@ A lista final de requisitos do sistema é a seguinte:
     - Todos os registos devem ter uma chave primária (ID)
     - Todos as tabelas devem possuir os campos “created_at”, “updated_at” e “deleted_at”
 
-# Lista de requisitos a incluir numa versão futura
+## Lista de requisitos a incluir numa versão futura
 Em versões futuras, os seguintes requisitos deverão ser incluidos
 - Alertas	
     - Definir, ver, editar e apagar alertas

@@ -7,8 +7,6 @@ bookCollapseSection: true
 bookHidden: true
 # bookComments: true
 ---
-
-# Money Manager
 Este projeto tem como objetivo desenvolver uma aplicação web completamente funcional para o registo e analise de transações financeiras.  
 
 Pretende-se abordar as seguintes tencologias durante o projeto
