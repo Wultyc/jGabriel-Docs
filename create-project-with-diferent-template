@@ -1,0 +1,15 @@
+Observando a lista de templates que temos
+```
+archetypes
+├── default.md
+├── docs.md
+└── projeto-academico
+    └── index.md
+└── projeto-pessoaç
+    └── index.md
+```
+
+Para criar um projeto académico
+```bash
+hugo new --kind projeto-academico docs/projetos-academicos/my-project
+```
