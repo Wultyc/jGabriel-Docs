@@ -18,7 +18,7 @@ Jorge Gabriel Azevedo
 André Oliveira
 
 ## Ano curricular
-1º Ano
+1º Ano, 2º Semestre
 
 ## Âmbito do Projeto
 Desenvolver uma aplicação em Java que auxilia-se os diretores de curso do ISEP a gerir os projetos de estágio dos alunos e que gravasse essa informação de forma precistente.

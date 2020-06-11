@@ -21,7 +21,7 @@ Maria Inês Almeida
 Mariana Guedes  
 
 ## Ano curricular
-2º Ano
+2º Ano, 1º Semestre
 
 ## Âmbito do Projeto
 Construir uma aplicação que calcula-se o caminho ótimo para um AGV recolher produtos de um corredor de um armazém.
