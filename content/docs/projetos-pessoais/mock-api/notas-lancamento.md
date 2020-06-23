@@ -8,6 +8,20 @@ bookCollapseSection: false
 # bookHidden: false
 # bookComments: true
 ---
+
+# Release 2.1
+### Change Log
+- Correção do erro no restauro dos endpoints
+- Os endpoints são agora corrigidos (convertidos em minusculas e removendo o ```/``` do final)
+
+### Knowned Issues
+- Nas rotas **/mocks** e **/mocks/watch** a animação de carregamento
+- Se o request for feito com um endpoint válido mas acabado com ```/``` o serviço retorna a resposta do metodo GET no lugar da que foi pedida
+
+### Quer ajudar?
+Faça um pull request com as alterações que considere uteis, abra um issue no GitHub ou contacte-me pelos outros canais.
+---
+
 ## Release 2.0
 Este segundo lançamento é focado em organização interna de código e migração da interface web para Vue.JS e Laravel Mix
 
@@ -24,6 +38,8 @@ Este segundo lançamento é focado em organização interna de código e migraç
 
 ### Quer ajudar?
 Faça um pull request com as alterações que considere uteis, abra um issue no GitHub ou contacte-me pelos outros canais.
+
+---
 
 ## First Release
 Primeiro lançamento
