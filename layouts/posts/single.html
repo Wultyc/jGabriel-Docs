@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article class="markdown">
+  {{ partial "docs/post-meta" . }}
+  <p>
+    {{- .Content -}}
+  </p>
+</article>
+{{ end }}
+
+{{ define "toc" }}
+  {{ partial "docs/toc" . }}
+{{ end }}
