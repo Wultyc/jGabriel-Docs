@@ -3,7 +3,7 @@ title: "Hello World"
 date: 2020-04-27T22:30:00Z
 images: ["jorge-gabriel-azevedo.jpg"]
 categories: ["Artigo Pessoal"]
-tags: ["Sobre mim", "C", "PHP", "Laravel", "HTML", "Mulesoft", "Java"]
+#tags: ["Sobre mim", "C", "PHP", "Laravel", "HTML", "Mulesoft", "Java"]
 authors: ["Jorge Gabriel Azevedo"]
 draft: false
 ---
