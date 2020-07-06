@@ -36,15 +36,11 @@ googleAnalytics = "UA-167181822-2"
 
 [menu]
 # [[menu.before]]
-[[menu.after]]
-  name = "HomePage"
-  url = "https://www.jgabriel.eu"
-  weight = 10
 
 [[menu.after]]
-  name = "Blog"
-  url = "https://www.jgabriel.eu/article/"
-  weight = 20
+  name = "jGabriel"
+  url = "https://www.jgabriel.eu"
+  weight = 10
 
 [params]
   # (Optional, default true) Controls table of contents visibility on right side of pages.
