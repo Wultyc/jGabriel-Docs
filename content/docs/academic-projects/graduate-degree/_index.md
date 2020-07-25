@@ -1,9 +1,9 @@
 ---
-title: "Mestrado"
-date: 2020-06-10T18:09:19+01:00
+title: "Graduate Degree"
+date: 2020-06-10T18:08:27+01:00
 github: ""
-weight: 9
-draft: true
+weight: 10
+draft: false
 bookCollapseSection: true
 # bookFlatSection: false
 # bookToc: true
@@ -11,4 +11,4 @@ bookCollapseSection: true
 # bookComments: true
 ---
 
-Projetos realizados no âmbito do mestrado
+Projetos realizados no âmbito da licenciatura

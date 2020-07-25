@@ -5,8 +5,8 @@ title = 'jGabriel Notebook'
 theme = 'hugo-book'
 
 # Website default language
-defaultContentLanguage = "pt"
-languageCode = "pt-pt"
+defaultContentLanguage = "en"
+languageCode = "en-en"
 
 # Book configuration
 disablePathToLower = true
@@ -29,8 +29,8 @@ googleAnalytics = "UA-167181822-2"
 # And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
 
 [languages]
-[languages.pt]
-  languageName = 'Português'
+[languages.en]
+  languageName = 'English'
   contentDir = 'content'
   weight = 1
 

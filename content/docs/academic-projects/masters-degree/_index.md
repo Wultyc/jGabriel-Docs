@@ -1,9 +1,9 @@
 ---
-title: "Licenciatura"
-date: 2020-06-10T18:08:27+01:00
+title: "Master's Degree"
+date: 2020-06-10T18:09:19+01:00
 github: ""
-weight: 10
-draft: false
+weight: 9
+draft: true
 bookCollapseSection: true
 # bookFlatSection: false
 # bookToc: true
@@ -11,4 +11,4 @@ bookCollapseSection: true
 # bookComments: true
 ---
 
-Projetos realizados no âmbito da licenctura
+Projetos realizados no âmbito do mestrado
