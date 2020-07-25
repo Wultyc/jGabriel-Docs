@@ -23,7 +23,7 @@ Projetos desenvolvidos em contexto académico.
 {{< /columns >}}
 
 ## Biblioteca
-A Biblioteca é uma secção no site onde eu reúno conteúdo interessante de outras pessoas que pode ser ussado como referência.
+A Biblioteca é uma secção no site onde eu reúno conteúdo interessante de outras pessoas que pode ser usado como referência.
 
 ## Posts
-Os Posts são publicações que eu faço sobre assuntos diversos e sem uma cornologia especifica. Server para amanter um registo de diversos assuntos para consulta futura
+Os Posts são publicações que eu faço sobre assuntos diversos e sem uma cronologia especifica. Server para manter um registo de diversos assuntos para consulta futura
