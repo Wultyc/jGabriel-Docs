@@ -21,7 +21,9 @@ Antes de começar a utilizar o serviço é necessário instalar-lo num servidor.
 ### Instalação
 Existem 3 modos de instalar o serviço: usar uma imagem pronta do Docker Hub (recomendado), montar a própria imagem docker ou fazer uma instalação tradicional
 
-{{< expand "Download de uma imagem do Docker Hub" >}}
+{{< tabs "instalation" >}}
+
+{{< tab "Download do Docker Hub" >}}
 Para executar este processo basta fazer pull da imagem e executar-la
 ```bash
 docker pull wultyc/mockapi:latest
@@ -30,9 +32,9 @@ docker run -p 8080:80 -dt wultyc/mockapi
 O parametro ```-p 8080:80``` server para criar um túnel entre a porta ```8080``` da máquina que está a executar o container e a porta ```80``` do próprio container  
 Para ter acesso à shell do container basta trocar o parametro ```-dt``` por ```-it```
 
-{{< /expand >}}
+{{< /tab >}}
 
-{{< expand "Construir imagem Docker e excutar" >}}
+{{< tab "Construir imagem Docker" >}}
 1. Clonar branch especifica do repositório criada para o efeito
   ```bash
   git clone -b docker https://github.com/Wultyc/mock-api.git mock-api
@@ -49,9 +51,9 @@ Para ter acesso à shell do container basta trocar o parametro ```-dt``` por ```
   ```
   O parametro ```-p 8080:80``` server para criar um túnel entre a porta ```8080``` da máquina que está a executar o container e a porta ```80``` do próprio container  
   Para ter acesso à shell do container basta trocar o parametro ```-dt``` por ```-it```
-{{< /expand >}}
+{{< /tab >}}
 
-{{< expand "Instalação tradicional" >}}
+{{< tab "Instalação tradicional" >}}
 1. Configurar o servidor Web e sistema de gestão de base de dados
 2. Criar uma base de dados para o serviço
 3. Fazer download da aplicação. Aqui existem duas opções distintas:
@@ -76,7 +78,9 @@ Para ter acesso à shell do container basta trocar o parametro ```-dt``` por ```
   composer install
   php artisan migrate:fresh
   ```
-{{< /expand >}}
+{{< /tab >}}
+
+{{< /tabs >}}
 
 {{< hint info >}}
   Devido à necessidade de fazer download de todas as dependências, as soluções baseadas em Docker podem demorar um pouco mais para fix«car operacionais na primeira execução. 
