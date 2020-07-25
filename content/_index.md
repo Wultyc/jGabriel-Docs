@@ -4,26 +4,28 @@ type: docs
 bookToc: false
 ---
 
-Esta é o local onde eu publico o conteúdo que eu crio
+This is the website I use to post the documentation for my projects and some other notes I take during my personal training and projects.
+This is a complement of my personal website [jGabriel.eu](http://jgabriel.eu) where I present myself and show my own portfolio.
 
-
-# Propósito deste site
-A ideia principal por trás deste site é armazenar todo o conteúdo que eu crio e serve de complemento ao meu website pessoal [jGabriel.eu](http://jgabriel.eu)
-
-# Secções deste site
+# This website sections
 
 {{< columns >}}
-## Projetos pessoais
-Projetos que desenvolvi no meu tempo livre por iniciativa própria ou que são fruto de algum curso/formação em que participei.
+## Personal Projects
+Projects I developed myself in other to fix some problem I found to learn some technology.
 
 <--->
 
-## Projetos académicos
-Projetos desenvolvidos em contexto académico.
+## Academic Projects
+These are the projects I developed during my degrees mostly with a team.
 {{< /columns >}}
 
-## Biblioteca
-A Biblioteca é uma secção no site onde eu reúno conteúdo interessante de outras pessoas que pode ser usado como referência.
+{{< columns >}}
+## Library
+These are contents I found and I want to save for future reference. I use this section also to store some more information I got about that specific topic.
+
+<--->
+
 
 ## Posts
-Os Posts são publicações que eu faço sobre assuntos diversos e sem uma cronologia especifica. Server para manter um registo de diversos assuntos para consulta futura
+Posts are the local I use to store information I collect about various topics. This could be some sort of tutorial, cheat sheet, investigation result or an opinion article. 
+{{< /columns >}}
