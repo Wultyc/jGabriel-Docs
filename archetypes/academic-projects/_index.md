@@ -13,20 +13,20 @@ bookCollapseSection: false
 
 [Descrição Inicial]
 
-## Grupo
+## Team
 [Elementos do Grupo]
 
-## Ano curricular
+## Scholar Year
 [Descrição Inicial]
 
-## Âmbito do Projeto
+## Project Goal
 [Âmbito do Projeto]
 
-## Tecnologias Principais
+## Main used Technologies
 {{< button >}}Tecnologia 1{{< /button >}}
 {{< button >}}Tecnologia 2{{< /button >}}
 {{< button >}}Tecnologia {{< /button >}}
 
-## Repositório
+## Repository
 {{< button href="https://github.com/Wultyc/" >}}Github{{< /button >}}
 
