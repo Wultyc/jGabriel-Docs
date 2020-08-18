@@ -1,7 +1,7 @@
 ---
 title: "Used resources"
 weight: 15
-draft: true
+draft: false
 bookCollapseSection: false
 # bookFlatSection: false
 # bookToc: true

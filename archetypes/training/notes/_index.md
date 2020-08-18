@@ -1,7 +1,7 @@
 ---
 title: "Notes"
 weight: 20
-draft: true
+draft: false
 bookCollapseSection: true
 # bookFlatSection: false
 # bookToc: true
