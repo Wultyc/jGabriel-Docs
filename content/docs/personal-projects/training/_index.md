@@ -3,7 +3,7 @@ title: "Extra courses and training"
 date: 2019-04-09
 github: ""
 weight: 10000
-draft: true
+draft: false
 bookCollapseSection: true
 # bookFlatSection: false
 # bookToc: true
