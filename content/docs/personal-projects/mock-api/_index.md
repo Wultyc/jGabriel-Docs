@@ -1,6 +1,6 @@
 ---
 title: "Mock Api"
-date: 2020-05-17
+date: 2020-09-22
 weight: 10
 github: "https://github.com/wultyc/mock-api"
 bookCollapseSection: true
