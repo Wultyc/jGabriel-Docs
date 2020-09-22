@@ -1,5 +1,5 @@
 ---
-title: "Homeserver"
+title: "HomeServer"
 date: 2020-09-21
 github: ""
 weight: 10
@@ -11,3 +11,4 @@ bookCollapseSection: false
 # bookComments: true
 ---
 
+I built my homeserver in order to have a central machine to run multiple useful applications for my home routine. 
