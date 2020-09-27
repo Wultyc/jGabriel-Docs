@@ -11,5 +11,5 @@ bookCollapseSection: false
 # bookComments: true
 ---
 
-O serviço Microwells Cloud é a ultima ponta do sistema. Este vai receber os requests vindo da Microwells Box e vai registar-los numa base de dados. Assim os utilizadores podem monitorar os seus resultados ao longo do tempo.
+The Microwells Cloud service is the last tip of the system. This one will receive the requests coming from the Microwells Box and will register them in a database. So users can monitor their results over time.
 {{< youtube 5c88IowedC8 >}}
