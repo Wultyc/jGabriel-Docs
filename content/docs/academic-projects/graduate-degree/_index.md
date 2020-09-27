@@ -11,4 +11,4 @@ bookCollapseSection: true
 # bookComments: true
 ---
 
-Projetos realizados no âmbito da licenciatura
+Undergraduate projects
