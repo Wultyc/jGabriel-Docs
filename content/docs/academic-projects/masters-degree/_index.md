@@ -11,4 +11,4 @@ bookCollapseSection: true
 # bookComments: true
 ---
 
-Projetos realizados no âmbito do mestrado
+These are projects that I did under the master's degree as an element of evaluating the contents of a Course Unit.
