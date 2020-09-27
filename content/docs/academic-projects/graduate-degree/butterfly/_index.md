@@ -11,23 +11,23 @@ bookCollapseSection: true
 # bookComments: true
 ---
 
-O Butterfly Project foi um projeto desenvolvido no âmbito da Unidade Curricular Modelação e Programação no ano letivo 2016/2017 e lecionada pela profª Elsa Gomes.
+The Butterfly Project was a project developed within the Curricular Unit Modeling and Programming in the academic year 2016/2017 and taught by Prof. Elsa Gomes.
 
-## Grupo
-Jorge Gabriel Azevedo  
+## Group
+Jorge Gabriel Azevedo
 André Oliveira
 
-## Ano curricular
-1º Ano, 2º Semestre
+## Academic year
+1st Year, 2nd Semester
 
-## Âmbito do Projeto
-Desenvolver uma aplicação em Java que auxilia-se os diretores de curso do ISEP a gerir os projetos de estágio dos alunos e que gravasse essa informação de forma precistente.
+## Scope of the Project
+Develop a Java application that helps ISEP course directors to manage students' internship projects and to record this information in a timely manner.
 
-## Tecnologias Principais
+## Main Technologies
 {{< button >}}Java{{< /button >}}
 
-## Repositório
+## Repository
 {{< button href="https://github.com/Wultyc/ISEP_1617_1A2S_MOPRO" >}}Github{{< /button >}}
 
-## Curiosidade
-O nome Project Butterfly foi escolhido pelos alunos, e pretende exprimir o simbolismo que um estágio tem para os estudantes que inicialmente passam por todo este processo de aprendizagem (larva da borboleta) que futuramente se vai transformar em engenheiros (borboleta) e passarão por um processo de adaptação a sua nova realidade (metamorfose).
+## Curiosity
+The name Project Butterfly was chosen by the students, and intends to express the symbolism that an internship has for students who initially go through this whole learning process (butterfly larva) that in the future will become engineers (butterfly) and will go through a process adaptation to their new reality (metamorphosis).

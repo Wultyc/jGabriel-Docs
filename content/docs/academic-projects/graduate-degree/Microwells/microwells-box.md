@@ -10,6 +10,6 @@ bookCollapseSection: false
 # bookHidden: false
 # bookComments: true
 ---
-A Microwells Box era o dispositivo que recolhia a informação vinda do módulo, apresentava-a ao utilizador e enviava para o serviço cloud. Era constituida essencialmente por um Raspberry Pi com um monitor touchscreen. A recolha da informação era feita via porta serie e era enviada para o servidor através de um request HTTP.
+The Microwells Box was the device that collected the information from the module, presented it to the user and sent it to the cloud service. It consisted essentially of a Raspberry Pi with a touchscreen monitor. The information was collected via the serial port and sent to the server via an HTTP request.
 
 {{<figure src="/images/projetos-academicos/licenciatura/microwells/box.png" caption="Interface da aplicação Java executada na Microwells Box" >}}

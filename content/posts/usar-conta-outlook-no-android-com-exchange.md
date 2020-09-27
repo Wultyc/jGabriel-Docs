@@ -1,5 +1,5 @@
 ---
-title: "Usar conta Outlook no Android com Microsoft Exchange"
+title: "Use Outlook account on Android with Microsoft Exchange"
 date: 2020-05-09T23:07:36Z
 images: ["articles/microsoft-exchange.png"] # The image resolution should be 900x500 or a proportional resolution
 categories: ["How to"]
@@ -8,26 +8,25 @@ authors: ["Jorge Gabriel Azevedo"]
 sources: []
 draft: false
 ---
-Configurar uma conta do serviço Outlook.com no android com o protocolo Microsoft Exchange traz inúmeras vantagens e não é assim tão difícil de configurar.
-<!--more-->
+Setting up an Outlook.com service account on android with the Microsoft Exchange protocol has numerous advantages and is not that difficult to set up.
 
-## Um pouco de história
-A primeira vez que tive contacto com um serviço de email foi com o antigo hotmail da Microsoft. Nunca fiz um uso muito intensivo desta conta. Entretanto quando adquiri o meu primeiro smartphone fiz uma migração completa para a suite google para poder usufruir melhor dos serviços cloud para sincronizar email, calendário e contactos. Era fantástico. Fui usando a suite Google durante muito tempo. Quando comecei a frequentar a licenciatura no ISEP, foi-me atribuída uma conta do Office 365 e eu comecei a explorar as funcionalidades da plataforma. Acabei por criar uma conta no agora Outlook.com para explorar num âmbito mais pessoal. Inevitavelmente um dos meus requisitos era sincronizar a minha caixa de email, o calendário e os contactos. Para isso eu tinha de usar o protocolo Microsoft Exchange. Com a minha conta do Office 365 foi muito fácil, mas com o meu a conta gratuita do Outlook.com eu nem sempre conseguia. Tudo piorou com a implementação do oAuth 2 na app do Gmail, porque a Microsoft usa servidores de autenticação diferentes para os diferentes tipos de contas e o Gmail não conseguia lidar com isso. Tentei mudar um pouco o meu *workflow* usando a conta google para sincronizar o calendário e contactos e Outlook para o email via IMAP. Considerei inclusive em regressar em definitivo à Google Suite, mas eu gostava realmente da solução da Microsoft e queria fazer uma migração completa.
+## A little of history
+The first time I had contact with an email service was with the old Microsoft hotmail. I have never used this account very intensively. However, when I purchased my first smartphone, I made a complete migration to the google suite to be able to make better use of cloud services to synchronize email, calendar and contacts. It was fantastic. I've been using the Google suite for a long time. When I started attending the degree at ISEP, I was assigned an Office 365 account and I started to explore the platform's features. I ended up creating an account on now Outlook.com to explore on a more personal level. Inevitably one of my requirements was to synchronize my mailbox, calendar and contacts. For that, I had to use the Microsoft Exchange protocol. With my Office 365 account it was very easy, but with my free Outlook.com account I couldn't always get it. It all got worse with the implementation of oAuth 2 in the Gmail app, because Microsoft uses different authentication servers for different types of accounts and Gmail couldn't handle it. I tried to change my * workflow * a little using the google account to synchronize the calendar and contacts and Outlook to email via IMAP. I even considered going back to Google Suite permanently, but I really liked Microsoft's solution and wanted to do a complete migration.
 
-## O Android, o Outlook.com e o Exchange
-A app do Gmail para Android consegue ter acesso direto às contas de email guardadas no sistema. Isso faz com que seja muito fácil adicionar uma conta de email no sistema e ler os emails na app do Gmail pois já existe uma pré-seleção de configurações para os serviços de email mais populares. No entanto a opção do Outlook.com é bastante limitada por usar o serviço IMAP em vez do Exchange. Talvez seja uma opção proposital pois um utilizador desinformado acabaria por migrar para a Google Suite para poder ter um acesso fácil aos seus dados na cloud. Nada conta isso, mas eu prefiro o serviço da Microsoft. Para usar o Microsoft Exchange teria de usar uma conta do Office365 e quando tentava autenticar-me com a minha conta Outlook.com obtida sempre um erro. Até que um dia eu pensei: será que eu não consigo “enganar” o recurso de contas do Android configurando manualmente uma conta Otlook.com com o protocolo Microsoft Exchange.
+## Android, Outlook.com and Exchange
+The Gmail app for Android has direct access to email accounts stored on the system. This makes it very easy to add an email account to the system and read emails in the Gmail app as there is already a pre-selection of settings for the most popular email services. However, Outlook.com's option is quite limited by using the IMAP service instead of Exchange. Perhaps it is a purposeful option because an uninformed user would end up migrating to Google Suite in order to have easy access to their data in the cloud. Nothing says that, but I prefer the Microsoft service. To use Microsoft Exchange I would have to use an Office365 account and when I tried to authenticate myself with my Outlook.com account I always got an error. Until one day I thought: will I be able to “cheat” the Android account feature by manually configuring an Otlook.com account with the Microsoft Exchange protocol.
 
-## Configurando o Android
-O processo é até bastante simples. Primeiro vamos ter de inciar o processo de criação de uma nova conta. Isto pode ser feito nas definições do sistema ou na app do Gmail como eu fiz.
+## Setting up Android
+The process is quite simple. First we will have to start the process of creating a new account. This can be done in the system settings or in the Gmail app as I did.
 <div align="center">
     {{<figure src="/images/articles/ms_exchange-on-android/01.jpg" width="200">}}
 </div>
-Selecionamos a opção adicionar uma conta, e a seguir escolhemos a opção “Exchange e Office 365”
+We select the option to add an account, and then we choose the option “Exchange and Office 365”
 <div align="center">
     {{<figure src="/images/articles/ms_exchange-on-android/02.jpg" width="200">}}
 </div>
-Introduzimos o email, mas em vez de carregar no botão “Seguinte”, selecionamos a opção “Configurar Manualmente”. Se carregarmos em “Seguinte”, vamos receber o erro de não ser uma conta Office365 e a sugestão para usar a opção “Outlook, Hotmail e Live” que usa o protocolo IMAP.  
-Nas configurações manuais, vamos preenchei com os dados da nossa conta. Preenchemos o campo email, com o email da conta que queremos sincronizar bem como o campo password. No campo “Domínio\Nome de Utilizador” é novamente o email. O servidor e porta são os seguintes:
+We enter the email, but instead of pressing the “Next” button, we select the option “Manually configure”. If we click on “Next”, we will receive the error of not being an Office365 account and the suggestion to use the option “Outlook, Hotmail and Live” that uses the IMAP protocol.
+In manual settings, we will fill in with our account data. We fill in the email field, with the email of the account we want to synchronize as well as the password field. In the “Domain \ Username” field, the email is again. The server and port are as follows:
 
 ```
 Servidor: smtp.office365.com
@@ -39,19 +38,19 @@ Tipo de segurança: SSL/TLS
     {{<figure src="/images/articles/ms_exchange-on-android/03.jpg" width="200">}}
 </div>
 
-Não deixa de ser curioso que o servidor seja do Office365.  
-Carregamos em “Seguinte” e o processo deve seguir sem demais problemas. 
+It is still curious that the server is Office365.
+We click on “Next” and the process should proceed without too much trouble. 
 <div align="center">
     {{<figure src="/images/articles/ms_exchange-on-android/04.jpg" width="200">}}
 </div>
 
-No final a conta estará registada no dispositivo e podemos verificar que esta a sincronizar email, contactos e calendário.
+In the end the account will be registered on the device and we can verify that it is synchronizing email, contacts and calendar.
 <div align="center">
     {{<figure src="/images/articles/ms_exchange-on-android/05.jpg" width="200">}}
 </div>
 
-## Concluindo
-Este procedimento não é o mais imediato nem usa o protocolo oAuth2 para a autenticação, mas é um modo muito fácil de integrar uma conta Outlook.com com as apps nativas de email, calendário e contactos. 
+## Concluding
+This procedure is not the most immediate nor does it use the oAuth2 protocol for authentication, but it is a very easy way to integrate an Outlook.com account with native email, calendar and contacts apps.
 
-Por hoje é tudo.  
-Um abraço. Fiquem bem.
+That's all for today.
+See you next time.

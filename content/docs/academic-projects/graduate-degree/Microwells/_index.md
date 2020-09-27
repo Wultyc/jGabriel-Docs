@@ -11,27 +11,27 @@ bookCollapseSection: true
 # bookComments: true
 ---
 
-Microwells é o nome de um projeto para a criação de um Kiosk de Saúde portátil que podesse ser utilizado em casa.
+Microwells is the name of a project for the creation of a portable Health Kiosk that could be used at home.
 
-## Grupo
+## Group
 - Barbara Santos
 - Brenda Espirito Santo
 - Jorge Gabriel Azevedo
 - Nuno Dinis
 - Rui Pinto
 
-## Ano curricular
-3º Ano, 1º Semestre
+## Academic year
+3rd Year, 1st Semester
 
-## Âmbito do Projeto
-Desenvolver um Minimum Viable Product (MVP) de leitor de sinais vitais com aramzenamento na cloud. O sistema era composto por uma unidade central (Microwells Box) que recolhia a informação dos sensores (Módulos) e enviava essa informação para um serviço web para ser aramazenada (Microwell Cloud.)
+## Scope of the Project
+Develop a Minimum Viable Product (MVP) of vital signs reader with storage in the cloud. The system consisted of a central unit (Microwells Box) that collected information from the sensors (Modules) and sent that information to a web service to be stored (Microwell Cloud.)
 
-## Tecnologias Principais
-{{< button >}}Arduino{{< /button >}}
-{{< button >}}Java{{< /button >}}
-{{< button >}}PHP + Laravel{{< /button >}}
-{{< button >}}MariaDB{{< /button >}}
+## Main Technologies
+{{<button>}} Arduino {{</button>}}
+{{<button>}} Java {{</button>}}
+{{<button>}} PHP + Laravel {{</button>}}
+{{<button>}} MariaDB {{</button>}}
 
-## Repositório
+## Repository
 {{< button href="https://github.com/Wultyc/ISEP_1819_3A1S_LSIS2" >}}Github{{< /button >}}
 

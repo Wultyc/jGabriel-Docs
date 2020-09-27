@@ -1,5 +1,5 @@
 ---
-title: "Resultados Finais"
+title: "Final Result"
 date: 2020-06-11T21:19:43+01:00
 github: ""
 weight: 40

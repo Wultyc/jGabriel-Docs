@@ -1,8 +1,8 @@
 ---
-title: "Demonstração da aplicação em Java - Comparação"
+title: "Java Comparation"
 date: 2018-01-10
 github: ""
-weight: 4
+weight: 5
 draft: false
 bookCollapseSection: true
 # bookFlatSection: false
@@ -12,7 +12,7 @@ bookToc: false
 ---
 
 {{< columns >}}
-Ocupação inicial do armazém
+Initial warehouse occupation
 ```
     Baia 1        Baia 2
      1 2 3         1 2 3
@@ -38,7 +38,7 @@ Ocupação inicial do armazém
 20 | X X X |  '  | X O O |
 ```
 <--->
-Solução para remoção de 5 elementos
+Solution for removing 5 elements
 ```
     Baia 1        Baia 2
      1 2 3         1 2 3
@@ -64,7 +64,7 @@ Solução para remoção de 5 elementos
 20 | O O O |  '  | O O O |
 ```
 <--->
-Ocupação após as alterações
+Occupation after changes
 ```
     Baia 1        Baia 2
      1 2 3         1 2 3

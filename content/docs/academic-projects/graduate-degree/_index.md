@@ -11,4 +11,4 @@ bookCollapseSection: true
 # bookComments: true
 ---
 
-Projetos realizados no âmbito da licenciatura
+These are projects that I did within the scope of the degree as an element of evaluation of the contents of a Course.
