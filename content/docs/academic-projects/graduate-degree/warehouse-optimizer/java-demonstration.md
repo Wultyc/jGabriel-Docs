@@ -1,5 +1,5 @@
 ---
-title: "Demonstração da aplicação em Java"
+title: "Java Demonstration"
 date: 2018-01-10
 github: ""
 weight: 4
@@ -10,8 +10,8 @@ bookCollapseSection: true
 # bookHidden: false
 # bookComments: true
 ---
-## Execução da aplicação
-Após executar a aplicação é apresentado o menú. Vamos começar por listar a ocupação inicial.
+## Application execution
+After running the application the menu is displayed. Let's start by listing the initial occupation.
 ```
 ================================================================================
 Bem-vindo
