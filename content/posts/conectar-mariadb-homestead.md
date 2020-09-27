@@ -1,5 +1,5 @@
 ---
-title: "Conectar Servidor MariaDB instalado no Homestead a partir do Host"
+title: "Connect MariaDB server on Homestead on Host computer"
 date: 2020-05-23T20:10:13Z
 images: ["articles/mariadb.png"] # The image resolution should be 900x500 or a proportional resolution
 categories: ["How to"]
@@ -8,19 +8,18 @@ authors: ["Jorge Gabriel Azevedo"]
 sources: []
 draft: false
 ---
-Durante o desenvolvimento de software é necessário muitas vezes testar o modo como a informação está a ser guardada na base de dados, e isso torna-se um pouco mais complicado quando o sistema de gestão de base de dados não está instalado localmente.
-<!--more-->
-Não permitir o acesso remoto (ainda para mais com o utilizador root) é uma estratégia que os sistemas de gestão de base de dados (Database Management Systems - DBMS) usam para aumentar a sua segurança. No entanto se a aplicação que usa esse DBMS estiver em desenvolvimento pode ser necessário o acesso o acesso com ao DBMS com utilizadores de permissões mais elevadas. Isto é particularmente difícil caso o servidor esteja num sistema remoto, como por exemplo uma máquina virtual como é o caso de quem usa o Homestead para desenvolver.  
-Vamos então ver o procedimento para contornar esta dificuldade.
->Este procedimento foi desenvolvido com base no Homestead, mas poderá ser seguido em outros cenários com mínimas alterações.
+During software development it is often necessary to test how information is being stored in the database, and this becomes a little more complicated when the database management system is not installed locally.
+Not allowing remote access (even more so with the root user) is a strategy that database management systems (Database Management Systems - DBMS) use to increase your security. However, if the application using that DBMS is in development, access to the DBMS with users with higher permissions may be required. This is particularly difficult if the server is on a remote system, such as a virtual machine as is the case for those using Homestead to develop.
+So let's look at the procedure to get around this difficulty.
+>This procedure was developed based on Homestead, but can be followed in other scenarios with minimal changes.
 
-### Permitir o acesso remoto
->Primeiro que tudo algo muito importante: Nunca faça isto num sistema de produção. Isto é apenas para fins de desenvolvimento. Se precisa de fazer isto num sistema de produção eu recomendo vivamente rever os seus procedimentos de segurança!
-Permitir o acesso remoto varia de sistema para sistema. Devem conferir a documentação do sistema para descobrir o procedimento a seguir. No caso do Homestead não é necessário fazer nada pois isto já vem ativado por padrão.
+### Allow remote access
+>First of all, something very important: Never do this in a production system. This is for development purposes only. If you need to do this on a production system, I highly recommend reviewing your safety procedures!
+Allowing remote access varies from system to system. You should check your system documentation to find out what to do. In the case of Homestead it is not necessary to do anything as this is already activated by default.
 
-### Configurar o cliente
-O cliente que vai ser usado para consultar a base de dados é da escolha de cada programador ou equipa. No meu caso vou usar o DBeaver.  
-Criamos uma nova conexão MariaDB e preenchemos com as informações do servidor, que para o Homestead são
+### Configure the client
+The client that will be used to consult the database is the choice of each programmer or team. In my case I will use DBeaver.
+We created a new MariaDB connection and filled it out with the server information, which for Homestead are
 ```
 Host: 192.168.10.10
 Port: 3306
@@ -31,19 +30,16 @@ Password: secret
     {{<figure src="/images/articles/mariadb-homestead/01.png">}}
 </div>
 
-A base de dados é um campo opcional. Testamos a conexão e o resultado deverá ser o seguinte. 
-
+The database is an optional field. We tested the connection and the result should be as follows.
 <div align="center">
     {{<figure src="/images/articles/mariadb-homestead/02.png">}}
 </div>
 
-Por fim clicamos em "Finish" e a conexão vai ser acrescentada à lista de conexões gravadas.
-
+Finally click on "Finish" and the connection will be added to the list of recorded connections.
 <div align="center">
     {{<figure src="/images/articles/mariadb-homestead/03.png">}}
 </div>
 
-Já podemos fazer todas as operações que forem necessárias.  
+We can now do all the necessary operations.
 
-Por hoje é tudo, vemo-nos numa próxima.  
-Abraço.
+That's all for today, see you next time.

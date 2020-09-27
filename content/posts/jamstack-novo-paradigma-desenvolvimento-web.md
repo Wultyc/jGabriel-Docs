@@ -1,5 +1,5 @@
 ---
-title: "JAMStack: o novo paradigma do desenvolvimento web"
+title: "JAMStack: the new paradigm of web development"
 date: 2020-06-06T17:41:48Z
 images: ["articles/jamstack.jpg"] # The image resolution should be 900x500 or a proportional resolution
 categories: ["Conceito"]
@@ -8,98 +8,105 @@ authors: ["Jorge Gabriel Azevedo"]
 sources: []
 draft: false
 ---
-JAMStack é uma nova abordagem no desenvolvimento web que permite a disponibilizarão de websites e webapps escaláveis de uma forma mais simples e eficaz com uma considerável redução de custos.
-<!--more-->
-Nos primórdios da internet o modo de disponibilizar um website era essencialmente escrever vários ficheiros HTML, um para cada página do site. Era sem dúvida um processo ineficiente e com o passar do tempo foram aparecendo soluções para tornar este processo mais dinâmico desde a partilha de código comum às páginas (p.e. estilos) até a gerar código HTML dinamicamente. E para auxiliar nesse dinamismo, ainda se incluiu as bases de dados para armazenar os dados de uma forma mais organizada e o resultado final é o que vemos na imagem abaixo.
+JAMStack is a new approach to web development that allows scalable websites and webapps to be made available in a simpler and more effective way with considerable cost savings.
+In the early days of the internet, the way to make a website available was essentially to write several HTML files, one for each page of the website. It was undoubtedly an inefficient process and, over time, solutions appeared to make this process more dynamic, from sharing common code to pages (e.g. styles) to generating HTML code dynamically. And to assist in this dynamism, databases were included to store data in a more organized way and the end result is what we see in the image below.
 
 <div align="center">
     {{<figure src="/images/articles/jamstack-novo-paradigma-desenvolvimento-web/0.jpg">}}
 </div>
 
->Neste diagrama usamos o termo servidor sendo referente ao software que está a ser executado e não necessariamente a máquinas físicas ou virtuais.
+>In this diagram we use the term server, referring to the software that is being executed and not necessarily to physical or virtual machines.
 
-Em teoria este sistema é o ideal, mas no caso de um site que tenha muitos acessos diários (um site de notícias por exemplo), o servidor de base de dados pode-se tornar um problema. Milhares de acessos simultâneos podem fazer com que o sistema vá abaixo e por consequência o site fique indisponível. A solução poderia partir trocar o hardware atual por hardware mais potente. Esta ação é chamada de escalar verticalmente o serviço e é normalmente o método mais caro pois envolve adquirir novos componentes mais caros sem que na maioria dos casos se aproveite os componentes anteriores. Mas sabendo à partida que a base de dados estava na maioria das vezes a servir exatamente o mesmo resultado, uma solução mais eficiente passaria por criar uma cache da resposta da base de dados e atualizar essa cache periodicamente.
+In theory this system is ideal, but in the case of a website that has a lot of daily accesses (a news site for example), the database server can become a problem. Thousands of simultaneous accesses can cause the system to go down and consequently the site is unavailable. The solution could be to replace the current hardware with more powerful hardware. This action is called scaling the service vertically and is usually the most expensive method as it involves purchasing new, more expensive components without in most cases taking advantage of the previous components. But knowing from the outset that the database was most often serving exactly the same result, a more efficient solution would be to create a cache of the database response and update that cache periodically.
 
 <div align="center">
     {{<figure src="/images/articles/jamstack-novo-paradigma-desenvolvimento-web/1.jpg">}}
 </div>
 
-Com o aumento do número de visitas o problema pode passar a estar no servidor web, o servidor de cache ou até os dois podem deixar de ter capacidade de lidar com este número elevado de visitas diárias. Mais uma vez escalar verticalmente é uma opção, mas surgiu então uma outra opção, escalar horizontalmente. Neste processo, em vez de adquirir hardware novo para substituir o antigo, adquire-se hardware (normalmente da mesma gama do atual), o hardware novo serve para dividir o trabalho com a/as máquinas existentes. Esta é uma solução mais viável pois o número de pedidos que poderão ser processados será o maior sem que o investimento seja tão avultado. Caso necessário, basta adicionar mais hardware paralelamente para aumentar a capacidade. Normalmente nesta abordagem surge uma nova entidade no sistema, o balanceador de carga que como o próprio nome indica vai distribuir o trabalho pelas máquinas existentes.
+With the increase in the number of visits, the problem may be on the web server, the cache server or even both can no longer be able to handle this high number of daily visits. Again, scaling vertically is an option, but then another option arose, scaling horizontally. In this process, instead of acquiring new hardware to replace the old one, one acquires hardware (usually in the same range as the current one), the new hardware is used to share the work with existing machines. This is a more viable solution as the number of orders that can be processed will be the largest without the investment being so large. If necessary, just add more hardware in parallel to increase capacity. Usually in this approach, a new entity appears in the system, the load balancer which, as its name implies, will distribute the work among the existing machines.
 
 <div align="center">
     {{<figure src="/images/articles/jamstack-novo-paradigma-desenvolvimento-web/2.jpg">}}
 </div>
 
-Nesta fase os problemas podem ser vários: voltar a ter demasiados pedidos à base de dados, o balanceador de carga atingir o seu limite, consumo energético, manutenção (física e digital) de toda esta infraestrutura, contratação de profissionais capacitados para gerir todas estas máquinas etc…
+At this stage, the problems may be several: having too many requests to the database, the load balancer reaching its limit, energy consumption, maintenance (physical and digital) of all this infrastructure, hiring qualified professionals to manage all these machines etc…
 
-Vamos fazer uma comparação de custos
+Let's do a cost comparison
 
-| Máquina                   | Arquitetura Tradicional | Arquitetura com Cache  | Arquitetura com balanceamento de carga                     |
-|---------------------------|:-----------------------:|:----------------------:|------------------------------------------------------------|
-| Servidor Web              | 1                       | 1                      | 1 por cada redundância                                     |
-| Servidor de Base de Dados | 1                       | 1                      | No mínimo 1, mas pode ser necessário mais para redundância |
-| Servidor de Cache         | 0                       | 1                      | 1 por cada redundância                                     |
-| Balanceador de carga      | 0                       | 0                      | 1                                                          |
+| Máquina         | Traditional Architecture | Architecture with cache | Load balance Architecture                               |
+|-----------------|--------------------------|-------------------------|---------------------------------------------------------|
+| Web server      | 1                        | 1                       | One for each redundant unit                             |
+| Database server | 1                        | 1                       | At least one but could be necessary more for redundancy |
+| Cache server    | 0                        | 1                       | One for each redundant unit                             |
+| Load balancer   | 0                        | 0                       | 1                                                       |
 
-Assumindo que cada serviço é executado numa única máquina, que máquina custa exatamente o mesmo, independentemente da sua função e que o seu custo mensal é 100€/máquina, chegamos à seguinte conclusão:
-- Arquitetura tradicional: 2 máquinas => 200€/mês
-- Arquitetura com cache: 3 máquinas => 300€/mês
-- Arquitetura com balanceamento de carga: 1 balanceador de carga + 1 servidor de base de dados + 2 máquinas por redundância, assumindo que existem 2 => 600€
 
-E estes custos crescem mediante o crescimento do número de máquinas e é importante não esquecer do capital humano que é preciso incluir. Será necessário tudo isto para manter um site?
 
-### Aprender olhando para trás
-A solução que construída foi-se tornando cada vez mais complexa, mas há uma conclusão tirada na arquitetura com cache que não foi suficientemente explorada. Concluiu-se que na maioria dos pedidos, a resposta da base de dados é igual à que já foi entregue. Se a resposta da base de dados é igual significa que o que vai ser entregue ao cliente também vai ser igual. Então por que motivo estamos sempre a computar os mesmos dados? Sempre a executar as mesmas operações sobre os mesmos dados para obter exatamente a mesma resposta. Será que não é possível guardar uma dessas respostas geradas e entregar para o cliente? Assim tínhamos o melhor dos dois mundos: por um lado não tínhamos de escrever cada um dos ficheiros individualmente e por outro não necessitávamos de estar sempre a computar os mesmos dados. A verdade é que a resposta está no JAMStack.
+2016/5000
+Assuming that each service is performed on a single machine, that machine costs exactly the same, regardless of its function and that its monthly cost is 100 € / machine, we arrive at the following conclusion:
+- Traditional architecture: 2 machines => 200 € / month
+- Architecture with cache: 3 machines => 300 € / month
+- Load-balanced architecture: 1 load balancer + 1 database server + 2 machines for redundancy, assuming there are 2 => 600 €
 
-### A proposta do JAMStack
-JAM de JAMStack significa: **J**avaScript, **A**PIs e **M**arkup. E basicamente isto descreve a abordagem a que me referia há pouco. Ficheiros HTML, CSS e JavaScript estáticos que são servidos aos clientes. E apesar de ser necessário um servidor na mesma, este tem uma carga de trabalho muito mais reduzida pois não tem de consultar base de dados, renderizar páginas, etc… que permite aumentar o número de pedidos respondidos que cada máquina consegue comportar.
+And these costs increase with the increase in the number of machines and it is important not to forget the human capital that needs to be included. Is all this necessary to maintain a website?
+
+### Learn looking back
+The solution that was built became more and more complex, but there is a conclusion drawn in the architecture with cache that was not sufficiently explored. It was concluded that in most requests, the database response is the same as the one already delivered. If the response from the database is the same it means that what will be delivered to the customer will also be the same. So why are we always computing the same data? Always performing the same operations on the same data to get exactly the same answer. Is it not possible to save one of these generated responses and deliver them to the customer? So we had the best of both worlds: on the one hand we did not have to write each file individually and on the other hand we did not need to be always computing the same data. The truth is that the answer is in JAMStack.
+
+### The JAMStack proposal
+JAMStack JAM means: **J**avaScript, **A**PIs and **M**arkup. And this basically describes the approach I was referring to earlier. Static HTML, CSS and JavaScript files that are served to customers. And although a server is still needed, it has a much lower workload as it does not have to consult the database, render pages, etc ... which allows to increase the number of requests answered that each machine can handle.
+Enviar feedback e opiniões
+Histórico
+Guardado
+Comunidade
+
 
 <div align="center">
     {{<figure src="/images/articles/jamstack-novo-paradigma-desenvolvimento-web/3.jpg">}}
 </div>
 
-Começar um projeto usando a filosofia JAMStack é bastante simples com ajuda de ferramentas como HUGO ou o Gatsby entre muitos outros. [Neste artigo]({{< relref "/posts/criar-site-hugo" >}}) abordo o uso do HUGO para a criação de sites estáticos.
+Starting a project using the JAMStack philosophy is quite simple with the help of tools like HUGO or Gatsby among many others. [In this article] ({{<relref "/posts/criar-site-hugo">}}) I discuss the use of HUGO for the creation of static websites.
 
 ### Content Delivery Network
-Vamos pensar agora que queremos criar uma rede de alta redundância para este site. Pelo facto destes servidores serem muito mais baratos quando comparados com os servidores tradicionais (refiro-me ao custo por request), criar uma grande rede para a distribuição destes sites estáticos torna-se muito barato. E é com base nisso que algumas empresas, como a Netlify, disponibiliza o serviço gratuito bastante generoso e suficiente para comportar sites de tamanho médio. Plataformas como esta são chamadas de Content Delivery Network ou simplesmente CDN e servem exclusivamente para alojar ficheiros estáticos para sere usados em sites, como por exemplo, scripts JS, ficheiros CSS e conteúdo media dos sites. Este meio de partilha era a estratégia usada antes para a distribuição de componentes estáticos e normalmente mais pesados em servidores mais próximos dos clientes e assim diminuir o tempo que a página demora a carregar. CDNs como estas podem ter milhares de nós por todo o mudo.
+Let's think now that we want to create a high redundancy network for this site. Because these servers are much cheaper when compared to traditional servers (I mean the cost per request), creating a large network for the distribution of these static sites becomes very cheap. And it is based on this that some companies, such as Netlify, offer the free service quite generous and sufficient to support medium-sized sites. Platforms like this are called Content Delivery Network or simply CDN and serve exclusively to host static files to be used on websites, such as JS scripts, CSS files and media content on the websites. This means of sharing was the strategy used before for the distribution of static and normally heavier components on servers closer to the customers and thus reducing the time that the page takes to load. CDNs like these can have thousands of us all over the world.
 
 <div align="center">
     {{<figure src="/images/articles/jamstack-novo-paradigma-desenvolvimento-web/4.jpg">}}
 </div>
 
-### Site estático, mas nem tanto
-Neste momento pode surgir uma questão: trocar o meu site atual por um estático não vai diminuir as minhas possibilidades e aumentar o meu trabalho para o manter? Não, e a justificação para isso está no **A** de JAMStack: APIs. Por todo o mundo, os programadores têm adotado arquiteturas de micro serviços. Em vez de escrever uma aplicação gigantesca com todas as funcionalidades necessárias, são desenvolvidas pequenas aplicações, mais simples, cada uma responsável apenas por uma parte muito especifica do sistema e todas estas aplicações comunicam por APIs. No caso do site é exatamente a mesma coisa. O site ou app, tirando partido do JavaScript vai consumir APIs e mediante a resposta dessas APIs modelam o conteúdo apresentado ao utilizador. E daqui temos duas grades opções:
-1.	Disponibilizar na CDN a app que vai consumir uma API alojada diretamente da nossa infraestrutura própria.
-2.	Manter o conteúdo todo na CDN e usar uma máquina própria que vai atualizar o conteúdo da CDN periodicamente.
+### Static site, but not so much
+At this point, a question may arise: will changing my current site for a static one not decrease my possibilities and increase my work to maintain it? No, and the justification for this is in the **A** of JAMStack: APIs. All over the world, programmers have adopted micro service architectures. Instead of writing a gigantic application with all the necessary functionalities, small, simpler applications are developed, each responsible for only a very specific part of the system and all of these applications communicate via APIs. In the case of the website, it is exactly the same thing. The website or app, taking advantage of JavaScript will consume APIs and upon the response of these APIs model the content presented to the user. And here we have two great options:
+1. Make available on CDN the app that will consume an API hosted directly from our own infrastructure.
+2. Keep the entire content on the CDN and use your own machine that will update the CDN content periodically.
 
 <div align="center">
     {{<figure src="/images/articles/jamstack-novo-paradigma-desenvolvimento-web/5.jpg">}}
 </div>
 
-Esta terá de ser uma decisão da própria equipa que terá de avaliar os prós e contras. Mesmo que se opte pela primeira alternativa, a carga provocada nos servidores próprios já não será tão alta pois não existe a necessidade de renderizar as páginas HTML. Além disso nada impede que haja uma solução híbrida. Voltando ao exemplo do site de notícias, as publicações seriam guardadas estaticamente na CDN, mas a área do utilizador, onde este gere a sua subscrição da newsletter usaria uma API que comunica diretamente com os servidores da empresa Assim reduzimos a carga da infraestrutura original sem ter de renunciar a tudo que já tinha sido feito. É tudo uma questão de analise sobre qual é a melhor maneira de aproveitar os recursos disponíveis.
+This will have to be a decision of the team itself that will have to evaluate the pros and cons. Even if you choose the first alternative, the load on your own servers will no longer be as high as there is no need to render HTML pages. Furthermore, there is nothing to prevent a hybrid solution. Returning to the example of the news site, the publications would be stored statically at the CDN, but the user area, where he manages his subscription to the newsletter would use an API that communicates directly with the company's servers So we reduced the load of the original infrastructure without having to renounce everything that had already been done. It's all about analyzing how best to take advantage of available resources.
 
-### JAMStack não é só para sites ou apps grandes
-Despois de todo este tempo é fácil cairmos na falacia que este Stack apenas serve para sites grandes com milhares de acessos diários, mas não é bem assim. Vamos então considerar um novo caso: disponibilizar portfolio pessoal online. As opções seriam:
-1.	Contratar um serviço de hosting partilhado
-2.	Contratar um serviço de Virtual Private Server (VPS)
-3.	Criar um servidor pessoal aproveitando hardware que já possuía ou comprando novo
-4.	Utilizar uma CDN para disponibilizar o site estaticamente
+### JAMStack is not just for websites or large apps
+After all this time it is easy to fall into the fallacy that this Stack only serves for large sites with thousands of daily accesses, but it is not so. So let's consider a new case: make personal portfolio available online. The options would be:
+1. Hire a shared hosting service
+2. Hire a Virtual Private Server (VPS) service
+3. Create a personal server taking advantage of hardware you already owned or buying new
+4. Use a CDN to make the site available statically
 
-Vamos analisar individualmente. No primeiro caso temos um custo mensal a rondar os 3€/mês. Temos espaço de armazenamento e largura de banda bastante limitados ainda para mais é disponibilizado serviços que podem não ser necessários. Além de tudo isto a performance neste tipo de serviço costuma ser a pior porque o servidor está a ser partilhado com outros clientes.
+We will analyze individually. In the first case, we have a monthly cost of around € 3 / month. We have very limited storage space and bandwidth yet services are available that may not be needed. In addition to all this, the performance in this type of service is usually the worst because the server is being shared with other clients.
 
-Na opção 2, temos uma VPS que nada mais é do que uma máquina virtual no datacenter do provedor. Deixamos de ter de partilhar o servidor com outros e normalmente os limites de recursos são mais altos. Mas neste caso teremos de configurar todo o ambiente para disponibilizar o site e garantir que não vão existir falhas de segurança. Além disso o servidor tem de receber manutenção (atualizações, auditorias de segurança, etc…) que envolve um conhecimento técnico que muitas veses o utilizador não tem. As VPS mais em conta rondam os 5€/mês.
+In option 2, we have a VPS that is nothing more than a virtual machine in the provider's datacenter. We no longer have to share the server with others and usually the resource limits are higher. But in this case we will have to configure the entire environment to make the site available and ensure that there are no security flaws. In addition, the server must receive maintenance (updates, security audits, etc.) that involves technical knowledge that the user often does not have. The most affordable VPS are around € 5 / month.
 
-Na terceira opção temos todos os aspetos de manter o servidor que tinhamos na opção 2, mas neste caso ainda temos de manter a máquina física e cobrir o consumo energético da mesma. Ainda exige que a máquina esteja ligada 24/7 e com uma boa ligação à internet para não causar indisponibilidade do serviço. Normalmente o hardware usado nestes ambientes não é destinado a uso em servidores e isso também pode comprometer a disponibilidade do site. De todas as opções é a que tem o pior custo/beneficio. O gasto mensal vai variar consoante a máquina usada e o plano de internet.
+In the third option we have all the aspects of maintaining the server that we had in option 2, but in this case we still have to maintain the physical machine and cover its energy consumption. It still requires the machine to be connected 24/7 and with a good internet connection so as not to cause unavailability of the service. Usually the hardware used in these environments is not intended for use on servers and this can also compromise the availability of the website. Of all the options, it has the worst cost / benefit. Monthly spending will vary depending on the machine used and the internet plan.
 
-Por fim temos a opção de alojar o site numa CDN. No caso da Netlify o plano gratuito já é bastante completo mas ainda podemos optar por um plano pago.
+Finally, we have the option of hosting the site on a CDN. In the case of Netlify the free plan is already quite complete but we can still opt for a paid plan.
 
 
-### JAMStack não é bala de prata
-Não existe nada que seja solução para todos os problemas! Em todos os casos devem ser avaliados os benefícios da adoção de uma tecnologia e poderá haver situações que JAMStack não será a melhor escolha a fazer, e está tudo bem com isso. No final do dia o que importa é que o utilizador esteja satisfeito com o que lhe é entregue para que continue a usufruir do serviço.
+### JAMStack is not a silver bullet
+There is nothing that is a solution to all problems! In all cases the benefits of adopting a technology must be evaluated and there may be situations that JAMStack will not be the best choice to make, and that is fine with that. At the end of the day, what matters is that the user is satisfied with what is delivered to him so that he continues to enjoy the service.
 
-Por hoje fico por aqui, até uma próxima  
-Abraço
+For today I'll stay here, until a next
+hug
 
-Fontes:  
+Sources:
 >   [JAMStack](https://jamstack.org/)  
 >   [Netlify](https://www.netlify.com/jamstack/)

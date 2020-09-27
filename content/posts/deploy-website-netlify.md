@@ -1,5 +1,5 @@
 ---
-title: "Deploy website para netlify"
+title: "Deploy website on netlify"
 date: 2020-06-05T23:10:07Z
 images: ["articles/netlify.jpg"] # The image resolution should be 900x500 or a proportional resolution
 categories: ["How to"]
@@ -8,49 +8,49 @@ authors: ["Jorge Gabriel Azevedo"]
 sources: []
 draft: false
 ---
-Netlify é uma plataforma para a disponibilização de sites estáticos que se tem vindo a popularizar pela sua CDN pública para disponibilização de sites e conteúdos estáticos.<!--more-->
-A plataforma da Netlify, de um modo muito simplista, é uma Content Delivery Network (CDN) alojada na AWS. Por ser um serviço sem grande esforço computacional a Netlify oferece um plano gratuito bastante interessant. Em conjunto com as suas ferramentas e plugins extras, tornou-se um serviço bastante interessante para indivíduos e empresas que pretendem publicar um site ou app baseado no JAM Stack.
+Netlify is a platform for the provision of static websites that has been popularized by its public CDN for the provision of websites and static content.
+Netlify's platform, in a very simplistic way, is a Content Delivery Network (CDN) hosted on AWS. As it is a service without great computational effort, Netlify offers a very interesting free plan. Together with its extra tools and plugins, it has become a very interesting service for individuals and companies looking to publish a website or app based on the JAM Stack.
 
-### Criação do conteúdo
-Neste artigo não vamos aprofundar muito sobre a criação de um site estático para publicar na plataforma da Netlify. [Neste artigo]({{< relref "/posts/criar-site-hugo" >}}) explico em detalhe o procedimento de construir um website com o gerador de sites estáticos HUGO.
+### Content creation
+In this article we will not go into much depth about creating a static website to publish on the Netlify platform. [In this article]({{<relref "/posts/criar-site-hugo">}}) I explain in detail the procedure of building a website with the HUGO static site generator.
 
-### Preparação inicial
-Primeiro que tudo é necessário ter o projeto do site num repositório git local. Este procedimento é descrito no artigo que mencionei anteriormente. Depois devemos fazer push do conteúdo local para um repositório remoto no Github, GitLab ou Bitbucket. Isto é importante porque é daqui que o Netlify vai puxar as atualizações para fazer deploy automático das novas versões do site.  
-Sim, é possível fazer um procedimento manual, fazendo o upload de um zip com o site, mas esse procedimento é ordens de grandeza menos eficiente. Por isso vamos seguir com a abordagem recomendada que é usando o repositório git. No meu caso vou usar o a minha própria conta do Github e vou fazer deploy do site exemplo que montei aqui.  
-O site que vamos fazer deploy é o seguinte.
-
+### Initial preparation
+First of all, it is necessary to have the site project in a local git repository. This procedure is described in the article I mentioned earlier. Then we must push the local content to a remote repository on Github, GitLab or Bitbucket. This is important because this is where Netlify will pull updates to automatically deploy new versions of the site.
+Yes, it is possible to do a manual procedure, uploading a zip with the site, but this procedure is orders of magnitude less efficient. So let's move on to the recommended approach using the git repository. In my case I will use my own Github account and I will deploy the example site I set up here.
+The site that we are going to deploy is the following.
 <div align="center">
     {{<figure src="/images/articles/deploy-website-netlify/0.png">}}
 </div>
 
-Como podem ver, o endereço é o da minha máquina virtual de desenvolvimento.
+As you can see, the address is that of my development virtual machine.
 
-### Criação da conta
-Primeiro acedemos ao site do Netlify, [www.netlify.com](https://www.netlify.com) e criamos uma conta. Para este caso a conta gratuita serve, mas para sites com um volume de tráfego maior, pode ser necessário um plano pago. Criada a conta e a equipa, vamos começar a criação do site. Primeiro carregamos no botão “New site from git”.
+### Account creation
+First, we go to the Netlify website, [www.netlify.com] (https://www.netlify.com) and create an account. In this case the free account will do, but for sites with a higher volume of traffic, a paid plan may be necessary. Having created the account and the team, let's start creating the site. First we click on the “New site from git” button.
 
 <div align="center">
     {{<figure src="/images/articles/deploy-website-netlify/1.png">}}
 </div>
 
-Neste momento é apresentada uma breve explicação do motivo pelo qual é sugerido o git e são dadas a três opções de serviços suportados: Github, GitLab e Bitbucket. Eu vou escolher Github, mas a decisão é de quem vai publicar o site onde pretende alojar o código.
+A brief explanation of why git is suggested is now presented and three options for supported services are given: Github, GitLab and Bitbucket. I will choose Github, but the decision is up to who will publish the site where they intend to host the code.
 
 <div align="center">
     {{<figure src="/images/articles/deploy-website-netlify/1-1.png">}}
 </div>
 
-De seguida aparece uma nova janela para fazer login no Github.
+Then a new window appears to log in to Github.
 
 <div align="center">
     {{<figure src="/images/articles/deploy-website-netlify/2.png">}}
 </div>
 
-Depois de fazer login, vão aparecer alguns passos de configuração de privacidade. No meu caso eu optei por apenas mostrar o repositório do qual pretendo fazer deploy
+After logging in, some privacy configuration steps will appear. In my case I chose to only show the repository from which I intend to deploy
 
 <div align="center">
     {{<figure src="/images/articles/deploy-website-netlify/3.png">}}
 </div>
 
-Depois de selecionado o repositório, vai aparecer uma página com a equipa, a branch do repositório que pretendemos associar, e algumas definições de build. As opções de build eu deixo em branco porque na raiz do meu repositório eu criei um ficheiro ```netlify.toml``` com todas estas informações.
+After selecting the repository, a page will appear with the team, the branch of the repository we want to associate, and some build definitions. The build options I leave blank because at the root of my repository I created a file ```netlify.toml``` with all this information.
+
 ```toml
 [build]
 publish = "public"
@@ -88,41 +88,40 @@ HUGO_ENABLEGITINFO = "true"
     {{<figure src="/images/articles/deploy-website-netlify/4.png">}}
 </div>
 
-Depois disto o deploy do site vai começar de imediato. Podemos ver na secção “Production deploys” que o deploy já começou.
+After that the deployment of the site will start immediately. We can see in the “Production deploys” section that the deployment has already started.
 
 <div align="center">
     {{<figure src="/images/articles/deploy-website-netlify/4-1.png">}}
 </div>
 
-Não deverá demorar muito até aparecer uma mensagem a verde “Published” no lugar do “Enqueued”. Neste momento podemos ver que nos foi atribuído um URL aleatório, mas mais à frente vamos mudar-lo.
+It shouldn't be long before a green “Published” message appears instead of “Enqueued”. At this point we can see that we have been assigned a random URL, but later on we will change it.
 
 <div align="center">
     {{<figure src="/images/articles/deploy-website-netlify/5.png">}}
 </div>
 
-Carregando em “Production deploys” temos uma lista dos deploys que já foram feitos. Se carregarmos em algum em específico é possível ver os logs desse deploy. Isto é principalmente útil quando ocorre algum erro para se poder fazer debug.  
-Voltando à página onde estávamos, vamos seguir o guia que no é apresentado. Se carregarmos no “2” vamos ser levado para uma página para definir um domínio próprio. Neste caso eu não tenho nenhum e quero manter o domínio da netlify, mas simplesmente alterar “sleepy-galileo-b616f9” para “deploy-netlify-example”. Para isso carregamos no botão “Domain Settings”. Na nova página que se abre carregamos no notão “Options” do nosso subdomínio netlify e em seguida “Edit site name”
+Clicking on “Production deploys” we have a list of the deploys that have already been made. If we click on a specific one it is possible to see the logs of that deploy. This is especially useful when there is an error to debug.
+Returning to the page where we were, we will follow the guide that is not presented. If we press “2” we will be taken to a page to define our own domain. In this case I have none and I want to keep the domain of netlify, but simply change “sleepy-galileo-b616f9” to “deploy-netlify-example”. To do this, click on the “Domain Settings” button. On the new page that opens, click on the “Options” button of our netlify subdomain and then “Edit site name”
 
 <div align="center">
     {{<figure src="/images/articles/deploy-website-netlify/6.png">}}
 </div>
 
-Inserimos o URL que queremos e gravamos
-> Atenção que caso o subdomínio não esteja disponível, não vai ser possível avançar.
+We insert the URL we want and record
+> Note that if the subdomain is not available, it will not be possible to proceed.
 
-Voltando para a homepage já podemos ver o nosso subdomínio definido. 
+Returning to the homepage we can already see our subdomain defined.
 
 <div align="center">
     {{<figure src="/images/articles/deploy-website-netlify/7.png">}}
 </div>
 
-Carregando nele somos levados para o nosso site publicado. Como podem ver o URL na barra de endereço é aquele que definimos nos passos anteriores.
+By clicking on it, we are taken to our published website. As you can see the URL in the address bar is the one we defined in the previous steps.
 
 <div align="center">
     {{<figure src="/images/articles/deploy-website-netlify/8.png">}}
 </div>
 
-Caso queiramos atualizar alguma coisa no site basta atualizar na versão local, fazer push para o repositório remoto que o netlify vai fazer o deploy da nova versão automaticamente.
+In case we want to update something on the site, just update the local version, push to the remote repository and netlify will automatically deploy the new version.
 
-Por hoje fico por aqui, até uma próxima  
-Abraço
+For today I'll stop here, see you next time
