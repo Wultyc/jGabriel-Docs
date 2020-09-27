@@ -11,4 +11,4 @@ bookCollapseSection: true
 # bookComments: true
 ---
 
-Undergraduate projects
+These are projects that I did within the scope of the degree as an element of evaluation of the contents of a Course.
