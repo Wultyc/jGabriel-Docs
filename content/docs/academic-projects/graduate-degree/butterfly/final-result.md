@@ -1,5 +1,5 @@
 ---
-title: "Resultado Final"
+title: "Final Result"
 date: 2017-06-16
 github: "https://github.com/Wultyc/ISEP_1617_1A2S_MOPRO"
 weight: 3
@@ -11,34 +11,34 @@ bookCollapseSection: false
 # bookComments: true
 ---
 
-O resultado obtido no final é o seguinte.
+The final result was:
 
-Ecrã de login
+Login screen
 {{<figure src="/images/projetos-academicos/licenciatura/butterfly-project/02-login.png">}}
 
-Menú inicial
+Start Menu
 {{<figure src="/images/projetos-academicos/licenciatura/butterfly-project/03-menu_inicial.png">}}
 
-Fluxo para a criação de um novo utilizador
+Process to create a new user
 {{<figure src="/images/projetos-academicos/licenciatura/butterfly-project/04-novo_utilizador.png">}}
 
-Pesquisa de utilizadores
+User Search
 {{<figure src="/images/projetos-academicos/licenciatura/butterfly-project/05-pesquisa_utilizadores.png">}}
 
-Atualixação da informação o perfil de um utilizador
+Update user profile information
 {{<figure src="/images/projetos-academicos/licenciatura/butterfly-project/06-atualizacao_perfil.png">}}
 
-Menú de listagem
+Menu  list
 {{<figure src="/images/projetos-academicos/licenciatura/butterfly-project/07-menu-listagem.png">}}
 
-Listagem de utlizadores
+Users list
 {{<figure src="/images/projetos-academicos/licenciatura/butterfly-project/08-listagem_utilizador.png">}}
 
-Perfil de Utilizador
+User Profile
 {{<figure src="/images/projetos-academicos/licenciatura/butterfly-project/09-perfil_utilizador.png">}}
 
-Mensagem de feedback após pedido de atualização do perfil de um utilizador
+Feedback message after after updating user profile
 {{<figure src="/images/projetos-academicos/licenciatura/butterfly-project/10-feedback_pedido_alteracao.png">}}
 
-Ficheiro de dados pressistente criado após a execução do programa e que permitia carregar a informação numa execução futura
+Application save file created after executing the program and allows to load the information in the future
 {{<figure src="/images/projetos-academicos/licenciatura/butterfly-project/11-ficcheiro-pressistente.png">}}
