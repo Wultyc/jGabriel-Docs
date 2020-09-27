@@ -1,5 +1,5 @@
 ---
-Title: "Projeto De Estágio"
+Title: "Internship Project"
 date: 2019-07-17
 github: ""
 weight: 1
