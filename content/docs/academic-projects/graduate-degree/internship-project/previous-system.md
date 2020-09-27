@@ -1,5 +1,5 @@
 ---
-title: "Sistema Anterior"
+title: "Previous System"
 date: 2020-06-11T21:18:58+01:00
 github: ""
 weight: 20
